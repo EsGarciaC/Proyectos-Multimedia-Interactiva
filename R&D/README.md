@@ -1,7 +1,9 @@
 # R&D
 Proyecto R&amp;D Multimedia Interactiva
 
-## Integrantes
-- Esteban García
-- Juan Esteban Ochoa
-- Juan David Correa
+## Integrantes:
+
+- [Juan David Correa Arango](@JuanD29)
+- [Juan Esteban Ochoa Gómez](@Juanes8a)
+- [Esteban García Carmona](@EsGarciaC)
+

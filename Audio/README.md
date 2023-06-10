@@ -3,6 +3,7 @@ Proyecto Audio multimedia interactiva
 
 ## Integrantes:
 
-- Juan David Correa Arango
-- Juan Esteban Ochoa Gómez
-- [@EsGarciaC](Esteban García Carmona)
+- [Juan David Correa Arango](@JuanD29)
+- [Juan Esteban Ochoa Gómez](@Juanes8a)
+- [Esteban García Carmona](@EsGarciaC)
+

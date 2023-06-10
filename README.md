@@ -3,9 +3,9 @@ Repositorio de todos los trabajos de multimedia interactiva 2023-1
 
 ## Integrantes:
 
-- Juan David Correa Arango
-- Juan Esteban Ochoa Gómez
-- [@EsGarciaC](Esteban García Carmona)
+- [Juan David Correa Arango](@JuanD29)
+- [Juan Esteban Ochoa Gómez](@Juanes8a)
+- [Esteban García Carmona](@EsGarciaC)
 
 ---------------------------------------------------------
 ### Proyectos:
