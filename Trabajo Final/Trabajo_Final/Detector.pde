@@ -1,17 +1,22 @@
 color[] colores = {};
+PShape dep;
+
 
 
 void DesabilitarTodosLosEstilos(PShape pais){
   
   for(int i = 0; i < pais.getChildCount();i++){
     
+    // Disable the colors found in the SVG file
     pais.getChild(i).disableStyle();
-    pais.getChild(i).scale(1.5);
+    // Scale to needed size
+    pais.getChild(i).scale(1.5); // 150 %
+    // random colors for all departments
     colores = append(colores, color(random(255),random(255),random(255)));
   }
 
 }
-PShape dep;
+
 void ResaltarDepartamento(PShape pais){
     
     noStroke();
