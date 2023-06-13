@@ -14,13 +14,13 @@ class Particle{
   }
   
   void show(){
-    noStroke();
-    fill(255);
-    ellipse(this.pos.x, this.pos.y, this.w, this.w);
+    reproductor.noStroke();
+    reproductor.fill(255);
+    reproductor.ellipse(this.pos.x, this.pos.y, this.w, this.w);
   }
   
   boolean edges(){
-    if(this.pos.x < -width/2 || this.pos.x > width/2 || this.pos.y < -height/2 || this.pos.y > height/2){
+    if(this.pos.x < -reproductor.width/2 || this.pos.x > reproductor.width/2 || this.pos.y < -reproductor.height/2 || this.pos.y > reproductor.height/2){
       return true;
     }else{
       return false;

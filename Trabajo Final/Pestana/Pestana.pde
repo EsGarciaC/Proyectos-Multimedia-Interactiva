@@ -5,7 +5,6 @@ int departamento_seleccionado = 0; // Variable con la cual cambiaré de tabla
 
 HashMap<String,PImage> hm = new HashMap<String,PImage>(); // 
 
-
 void setup() {
   size(300, 300);
 
@@ -50,16 +49,5 @@ void mousePressed() {
   }else{
     image(hm.get("Bolivar"),0,0,width,height);
   }
-}
-}
-
- public class ThirdApplet extends PApplet {
-
-  public void settings() {
-    size(600, 400);
-  }
-  public void draw() {
-    background(255,0,255);
-
 }
 }

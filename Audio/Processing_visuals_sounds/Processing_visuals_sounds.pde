@@ -149,6 +149,7 @@ void updateNodes(){
         
       }
       stroke(255);
+      
       nodes[i].run(player3.isPlaying());
     }
 }

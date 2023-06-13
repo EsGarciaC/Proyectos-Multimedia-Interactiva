@@ -13,6 +13,8 @@ void DesabilitarTodosLosEstilos(PShape pais){
     pais.getChild(i).scale(1.5); // 150 %
     // random colors for all departments
     colores = append(colores, color(random(255),random(255),random(255)));
+    loadDeptCancion(pais.getChild(i).getName());
+    loadDeptImagen(pais.getChild(i).getName());
   }
 
 }
@@ -29,7 +31,8 @@ void ResaltarDepartamento(PShape pais){
          fill(255, 255, 255, 0.8*255);
          shape(dep, offset.x, offset.y);
          
-         println(dep.getName());
+         //println(dep.getName());
+         currentDept = dep.getName();
     }
     
   }
