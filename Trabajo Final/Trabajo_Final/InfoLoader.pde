@@ -20,6 +20,7 @@ AudioPlayer reproducirCancion(){
       if (!currentDept.equals("")){
         currentCancion.rewind();
         currentCancion.play();
+        paused = false;
       }
   }
   return currentCancion;

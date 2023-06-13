@@ -9,8 +9,14 @@ class Particle{
   }
   
   void update(){
+    if (!paused){
     this.vel.add(this.acc);
     this.pos.add(this.vel);
+    }
+    else{
+    this.vel.add(0,0);
+    this.pos.add(0,0);
+    }
   }
   
   void show(){
