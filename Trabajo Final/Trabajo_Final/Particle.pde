@@ -1,6 +1,7 @@
 class Particle{
   PVector pos, vel, acc;
   float w;
+  //Definición del estado inicial y dinámica de la particula
   Particle(){
     this.pos = PVector.random2D().mult(200);
     this.vel = new PVector(0, 0);

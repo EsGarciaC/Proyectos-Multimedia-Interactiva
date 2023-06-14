@@ -15,11 +15,11 @@ public class Reproductor extends PApplet {
 
     for(int i = 0; i < bands*2; i++){ 
     
-    // Starting positions of line
+    // Posición inicial de la linea
     float start_x = radius*cos(PI*(i+x)/bands);
     float start_y = radius*sin(PI*(i+x)/bands);
       
-    // Draw line based on sound
+    // Dibujo de la linea basado en la frecuencia del sonido
     stroke(255);
     strokeWeight(1);
 
