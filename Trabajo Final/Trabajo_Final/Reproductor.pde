@@ -19,7 +19,7 @@ public class Reproductor extends PApplet {
     float start_y = radius*sin(PI*(i+x)/bands);
       
     // Draw line based on sound
-    stroke(252,255,51);
+    stroke(255);
     strokeWeight(1);
 
     line(start_x, start_y, start_x + fft.getFreq(i)*cos(PI*(i+x)/bands), start_y + fft.getFreq(i)*sin(PI*(i+x)/bands));
