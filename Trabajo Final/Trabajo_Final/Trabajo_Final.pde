@@ -10,7 +10,7 @@ import ddf.minim.analysis.*;
 //Reproductor
 Reproductor reproductor = null;
 String[] args = {""};
-PImage background, cd, fondoPrincipal;
+PImage background, cd;
 Minim minim = new Minim(this);
 AudioPlayer song = null;
 FFT fft;
@@ -35,7 +35,8 @@ ArrayList<Particle> particles = new ArrayList<Particle>();
 
 int counter = 1;
 float r = 180;
-
+PImage puntero, fondoPrincipal;
+float divisorPuntero = 1.5;
 
 void setup() {
   size(1300, 1080);  
@@ -46,6 +47,8 @@ void setup() {
   background = loadImage("background.jpg");
   cd = loadImage("CD.png");
   fondoPrincipal = loadImage("fondos/cañoCristales.png");
+  puntero = loadImage("punteroCarro.png");
+  noCursor();
 }
 
 void draw() {
@@ -60,8 +63,8 @@ void draw() {
     image(currentImagen, 740, 10, currentImagen.width/1.2, currentImagen.height/1.2);
   }
   
-  fill(255, 0, 0);
-  ellipse(mouseX, mouseY, 20, 20);
+  //Puntero
+  image(puntero, mouseX-puntero.width/5, mouseY-puntero.height/5, puntero.width/2.5, puntero.height/2.5);
   
 }
 
