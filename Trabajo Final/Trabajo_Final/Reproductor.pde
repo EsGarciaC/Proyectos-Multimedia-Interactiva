@@ -63,5 +63,5 @@ void updateParticulas(){
       }else{
         particles.remove(i);
       }
-      }
-  }
+    }
+}

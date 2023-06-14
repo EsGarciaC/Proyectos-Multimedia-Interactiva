@@ -36,10 +36,9 @@ ArrayList<Particle> particles = new ArrayList<Particle>();
 int counter = 1;
 float r = 180;
 PImage puntero, fondoPrincipal;
-float divisorPuntero = 1.5;
 
 void setup() {
-  size(1300, 1080);  
+  size(1024, 768);  
   colombia = loadShape("colo.svg");
   DesabilitarTodosLosEstilos(colombia);
   offset = new PVector(0,0);
@@ -60,11 +59,11 @@ void draw() {
   ResaltarDepartamento(colombia);
   
   if(currentImagen != null){
-    image(currentImagen, 740, 10, currentImagen.width/1.2, currentImagen.height/1.2);
+    image(currentImagen, 600, 10, currentImagen.width/1.5, currentImagen.height/1.5);
   }
   
   //Puntero
-  image(puntero, mouseX-puntero.width/5, mouseY-puntero.height/5, puntero.width/2.5, puntero.height/2.5);
+  image(puntero, mouseX-puntero.width/8, mouseY-puntero.height/8, puntero.width/4, puntero.height/4);
   
 }
 

@@ -10,7 +10,7 @@ void DesabilitarTodosLosEstilos(PShape pais){
     // Disable the colors found in the SVG file
     pais.getChild(i).disableStyle();
     // Scale to needed size
-    pais.getChild(i).scale(1.5); // 150 %
+    pais.getChild(i).scale(1); // 150 %
     // random colors for all departments
     colores = append(colores, color(random(255),random(255),random(255)));
     loadDeptCancion(pais.getChild(i).getName());
