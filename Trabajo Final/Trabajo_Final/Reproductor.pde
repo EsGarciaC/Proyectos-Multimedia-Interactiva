@@ -1,3 +1,4 @@
+//Segunda pestaña
 public class Reproductor extends PApplet {
   
   public void settings() {
@@ -29,7 +30,7 @@ public class Reproductor extends PApplet {
 
 
     imageMode(CENTER);
-    if (!paused){
+    if (!paused){ // Mientras no esté pausado se rota el cd
       counter+=2;
     }
     rotate(counter*TWO_PI/360);
@@ -37,7 +38,7 @@ public class Reproductor extends PApplet {
   }
   
   
-  
+  // Pausar la canción con la tecla Enter
   void keyPressed(){
     if (keyCode == ENTER && song.isPlaying()){
       song.pause();
@@ -50,6 +51,7 @@ public class Reproductor extends PApplet {
   }
 }
 
+//Actualizar las posiciones de las particulas y si se encuentrá fuera de los bordes se elimina la partícula
 void updateParticulas(){
     Particle part = new Particle();
     if(!paused){

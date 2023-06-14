@@ -10,7 +10,7 @@ import ddf.minim.analysis.*;
 //Reproductor
 Reproductor reproductor = null;
 String[] args = {""};
-PImage background, cd;
+PImage background, cd; // Imagenes para el visualizador de la musica
 Minim minim = new Minim(this);
 AudioPlayer song = null;
 FFT fft;
@@ -19,7 +19,7 @@ boolean paused = false;
 int x = 0;
 int radius = 180;
 
-//Enciclopedias
+//Almacenaje de canciones e imagenes de cada departamento
 HashMap<String, AudioPlayer> enciclopediaCanciones = new HashMap<String, AudioPlayer>();
 HashMap<String,PImage> enciclopediaImagenes = new HashMap<String,PImage>();
 
@@ -31,7 +31,7 @@ PVector offset;
 PImage currentImagen = null;
 String currentDept = "";
 String lastDept = "";
-ArrayList<Particle> particles = new ArrayList<Particle>();
+ArrayList<Particle> particles = new ArrayList<Particle>(); 
 
 int counter = 1;
 float r = 180;
@@ -58,11 +58,12 @@ void draw() {
   
   ResaltarDepartamento(colombia);
   
+  // Cuando se da click en algún departamento se actualiza la imagen de su información
   if(currentImagen != null){
     image(currentImagen, 600, 10, currentImagen.width/1.5, currentImagen.height/1.5);
   }
   
-  //Puntero
+  //Imagen del Puntero
   image(puntero, mouseX-puntero.width/8, mouseY-puntero.height/8, puntero.width/4, puntero.height/4);
   
 }
@@ -72,11 +73,13 @@ void mousePressed(){
   song = reproducirCancion();
   fft = new FFT(song.bufferSize(), song.sampleRate());
   bands = fft.specSize();
-  lastDept = currentDept;
-  if(reproductor == null){
-    reproductor = new Reproductor();
-    PApplet.runSketch(args, reproductor);
-  }
+  lastDept = currentDept;// Variable para determinar si hay cambio de departamento
   
+  //Condicional para la primera vez que se selecciona un departamento
+  if(reproductor == null){  
+    reproductor = new Reproductor();
+    PApplet.runSketch(args, reproductor); //Correr la segunda pestaña del visualizador de la música
+  }
+  //Actualización del departamento
   currentImagen = enciclopediaImagenes.get(currentDept);
 }

@@ -2,7 +2,7 @@ color[] colores = {};
 PShape dep;
 
 
-
+//Se recibe el SVG del mapa de Colombia
 void DesabilitarTodosLosEstilos(PShape pais){
   
   for(int i = 0; i < pais.getChildCount();i++){
@@ -18,7 +18,7 @@ void DesabilitarTodosLosEstilos(PShape pais){
   }
 
 }
-
+// Asignar un color aleatorio a cada departamento
 void ResaltarDepartamento(PShape pais){
     
     noStroke();
@@ -38,7 +38,7 @@ void ResaltarDepartamento(PShape pais){
   }
 }
 
-
+//Detectar si el mouse está en dicho departamento
 boolean isInside(PShape sh) {
   
     return PGS_ShapePredicates.containsPoint(sh, new PVector(mouseX - offset.x, mouseY - offset.y));

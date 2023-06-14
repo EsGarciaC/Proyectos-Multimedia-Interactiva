@@ -7,7 +7,7 @@ class Particle{
     this.acc = pos.copy().mult(random(0.0001, 0.00001));
     this.w = random(3, 5);
   }
-  
+  // Se actualiza la posición de la particula teniendo en cuenta si está pausado o no el reproductor
   void update(){
     if (!paused){
     this.vel.add(this.acc);
@@ -24,7 +24,7 @@ class Particle{
     reproductor.fill(255);
     reproductor.ellipse(this.pos.x, this.pos.y, this.w, this.w);
   }
-  
+  //Establecer si la particula ha salido de la pestaña del reproductor
   boolean edges(){
     if(this.pos.x < -reproductor.width/2 || this.pos.x > reproductor.width/2 || this.pos.y < -reproductor.height/2 || this.pos.y > reproductor.height/2){
       return true;

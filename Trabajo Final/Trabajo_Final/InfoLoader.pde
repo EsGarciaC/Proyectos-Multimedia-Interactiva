@@ -1,5 +1,3 @@
-//Supongo que aquí puede ir todo el codigo para cargar la info
-
 //Se ingresan las canciones e imagenes a sus respectivos HashMap
 void loadDeptCancion(String dept){
     //if (dept.equals("Antioquia"))
@@ -10,14 +8,14 @@ void loadDeptCancion(String dept){
 AudioPlayer reproducirCancion(){
   AudioPlayer currentCancion = enciclopediaCanciones.get(currentDept);
   AudioPlayer lastCancion;
-  if (!lastDept.equals(currentDept)){
+  if (!lastDept.equals(currentDept)){ // Si hay un cambio de departamento pausar la canción actual
       //currentCancion = enciclopediaCanciones.get(currentDept);
       lastCancion = enciclopediaCanciones.get(lastDept);
       if(!lastDept.equals("")){
         lastCancion.pause();
         lastCancion.rewind();
       }
-      if (!currentDept.equals("")){
+      if (!currentDept.equals("")){ // Reproducir canción actual
         currentCancion.rewind();
         currentCancion.play();
         paused = false;
@@ -26,6 +24,7 @@ AudioPlayer reproducirCancion(){
   return currentCancion;
 }
 
+// Ingresar imagen en el Hashmap de imagenes
 void loadDeptImagen(String dept){
     enciclopediaImagenes.put(dept, loadImage("Imagenes/" + dept + ".jpg"));
 }
